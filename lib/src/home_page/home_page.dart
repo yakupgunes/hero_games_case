@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:hero_games_case/src/constant/image_strings.dart';
-import 'package:hero_games_case/src/constant/text_string.dart';
+import 'package:hero_games_case/src/constants/image_strings.dart';
+import 'package:hero_games_case/src/constants/text_string.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
