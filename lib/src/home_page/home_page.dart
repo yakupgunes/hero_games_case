@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:hero_games_case/src/constant/image_strings.dart';
+import 'package:hero_games_case/src/constant/text_string.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -34,15 +36,15 @@ class _HomePageState extends State<HomePage> {
             const Padding(
               padding: EdgeInsets.symmetric(horizontal: 24.0),
               child: Row(children: [
-                Text("Hello, ", style: TextStyle(fontSize: 20)),
-                Text("Sara Rose",
+                Text(tWelcomeText1, style: TextStyle(fontSize: 20)),
+                Text(tWelcomeText2,
                     style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20))
               ]),
             ),
             const SizedBox(height: 10),
             const Padding(
               padding: EdgeInsets.symmetric(horizontal: 24.0),
-              child: Text("How are you feeling today ?"),
+              child: Text(tWelcomeText3),
             ),
             const SizedBox(height: 20),
             Row(
@@ -57,7 +59,7 @@ class _HomePageState extends State<HomePage> {
                     border: Border.all(width: 10, color: Colors.grey),
                   ),
                   child: const CircleAvatar(
-                    backgroundImage: AssetImage('assets/images/love.png'),
+                    backgroundImage: AssetImage(tMoodImage1),
                   ),
                 ),
                 Container(
@@ -69,7 +71,7 @@ class _HomePageState extends State<HomePage> {
                     border: Border.all(width: 10, color: Colors.grey),
                   ),
                   child: const CircleAvatar(
-                    backgroundImage: AssetImage('assets/images/cool.png'),
+                    backgroundImage: AssetImage(tMoodImage2),
                   ),
                 ),
                 Container(
@@ -81,7 +83,7 @@ class _HomePageState extends State<HomePage> {
                     border: Border.all(width: 10, color: Colors.grey),
                   ),
                   child: const CircleAvatar(
-                    backgroundImage: AssetImage('assets/images/happy.png'),
+                    backgroundImage: AssetImage(tMoodImage3),
                   ),
                 ),
                 Container(
@@ -93,7 +95,7 @@ class _HomePageState extends State<HomePage> {
                     border: Border.all(width: 10, color: Colors.grey),
                   ),
                   child: const CircleAvatar(
-                    backgroundImage: AssetImage('assets/images/sad.png'),
+                    backgroundImage: AssetImage(tMoodImage4),
                   ),
                 ),
               ],
@@ -107,19 +109,19 @@ class _HomePageState extends State<HomePage> {
                   children: [
                     Container(
                       margin: const EdgeInsets.symmetric(horizontal: 36.0),
-                      child: const Text("Love"),
+                      child: const Text(tMoodText1),
                     ),
                     Container(
                       margin: const EdgeInsets.symmetric(horizontal: 36.0),
-                      child: const Text("Cool"),
+                      child: const Text(tMoodText2),
                     ),
                     Container(
                       margin: const EdgeInsets.symmetric(horizontal: 36.0),
-                      child: const Text("Happy"),
+                      child: const Text(tMoodText3),
                     ),
                     Container(
                       margin: const EdgeInsets.symmetric(horizontal: 36.0),
-                      child: const Text("Sad"),
+                      child: const Text(tMoodText4),
                     ),
                   ],
                 ),
@@ -135,7 +137,7 @@ class _HomePageState extends State<HomePage> {
                     Padding(
                       padding: EdgeInsets.symmetric(horizontal: 24.0),
                       child: Text(
-                        "Feature",
+                        tTitleText1,
                         style: TextStyle(
                             fontWeight: FontWeight.bold, fontSize: 19),
                       ),
@@ -145,7 +147,7 @@ class _HomePageState extends State<HomePage> {
                       child: Row(
                         children: [
                           Text(
-                            "See more ",
+                            tTitleText2,
                             style: TextStyle(
                                 fontWeight: FontWeight.bold,
                                 color: Colors.green,
@@ -188,7 +190,7 @@ class _HomePageState extends State<HomePage> {
                                   crossAxisAlignment: CrossAxisAlignment.start,
                                   children: [
                                     Text(
-                                      "Positive vibes",
+                                      tPageBuilderText1,
                                       style: TextStyle(
                                           color: Colors.purple,
                                           fontSize: 20.0,
@@ -196,7 +198,7 @@ class _HomePageState extends State<HomePage> {
                                     ),
                                     SizedBox(height: 15.0),
                                     Text(
-                                      "Boost your mood with positive vibes",
+                                      tPageBuilderText2,
                                       style: TextStyle(
                                           fontSize: 20.0,
                                           fontWeight: FontWeight.bold),
@@ -208,7 +210,7 @@ class _HomePageState extends State<HomePage> {
                                             color: Colors.green, size: 35),
                                         SizedBox(width: 10),
                                         Text(
-                                          "10 mins",
+                                          tPageBuilderText3,
                                           style: TextStyle(
                                               fontSize: 20,
                                               fontWeight: FontWeight.bold),
@@ -223,8 +225,7 @@ class _HomePageState extends State<HomePage> {
                                 width: 150,
                                 decoration: const BoxDecoration(
                                   image: DecorationImage(
-                                    image:
-                                        AssetImage("assets/images/doggy.png"),
+                                    image: AssetImage(tPageBuilderImage),
                                   ),
                                 ),
                               ),
@@ -257,7 +258,7 @@ class _HomePageState extends State<HomePage> {
                     Padding(
                       padding: EdgeInsets.symmetric(horizontal: 24.0),
                       child: Text(
-                        "Exercise",
+                        tTitleText3,
                         style: TextStyle(
                             fontWeight: FontWeight.bold, fontSize: 19),
                       ),
@@ -267,7 +268,7 @@ class _HomePageState extends State<HomePage> {
                       child: Row(
                         children: [
                           Text(
-                            "See more ",
+                            tTitleText2,
                             style: TextStyle(
                                 fontWeight: FontWeight.bold,
                                 color: Colors.green,
@@ -299,14 +300,14 @@ class _HomePageState extends State<HomePage> {
                     child: Row(
                       children: [
                         Image.asset(
-                          'assets/images/icon1.png',
+                          tExerciseIconImage1,
                           color: const Color.fromARGB(255, 227, 119, 247),
                           width: 30.0,
                           height: 30.0,
                         ),
                         const SizedBox(width: 16.0),
                         const Text(
-                          'Relaxation',
+                          tExerciseTexts1,
                           style: TextStyle(
                               fontSize: 18.0,
                               color: Colors.black,
@@ -327,13 +328,13 @@ class _HomePageState extends State<HomePage> {
                     child: Row(
                       children: [
                         Image.asset(
-                          'assets/images/icon2.png',
+                          tExerciseIconImage2,
                           width: 30.0,
                           height: 30.0,
                         ),
                         const SizedBox(width: 16.0),
                         const Text(
-                          'Meditation',
+                          tExerciseTexts2,
                           style: TextStyle(
                               fontSize: 18.0,
                               color: Colors.black,
@@ -359,14 +360,14 @@ class _HomePageState extends State<HomePage> {
                     child: Row(
                       children: [
                         Image.asset(
-                          'assets/images/icon3.png',
+                          tExerciseIconImage3,
                           color: const Color.fromARGB(255, 255, 190, 185),
                           width: 30.0,
                           height: 30.0,
                         ),
                         const SizedBox(width: 16.0),
                         const Text(
-                          'Breathing',
+                          tExerciseTexts3,
                           style: TextStyle(
                               fontSize: 18.0,
                               color: Colors.black,
@@ -387,13 +388,13 @@ class _HomePageState extends State<HomePage> {
                     child: Row(
                       children: [
                         Image.asset(
-                          'assets/images/icon4.png',
+                          tExerciseIconImage4,
                           width: 30.0,
                           height: 30.0,
                         ),
                         const SizedBox(width: 16.0),
                         const Text(
-                          'Yoga',
+                          tExerciseTexts4,
                           style: TextStyle(
                               fontSize: 18.0,
                               color: Colors.black,
@@ -411,7 +412,7 @@ class _HomePageState extends State<HomePage> {
           items: const <BottomNavigationBarItem>[
             BottomNavigationBarItem(
               icon: Icon(Icons.home, color: Colors.black),
-              label: 'App',
+              label: 'Home',
             ),
             BottomNavigationBarItem(
               icon: Icon(Icons.apps, color: Colors.black),
